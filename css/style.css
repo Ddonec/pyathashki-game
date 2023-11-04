@@ -142,11 +142,10 @@ body {
 
 .game-area {
   display: block;
-  max-width: 600px;
   margin: auto;
   text-align: center;
   user-select: none;
-  min-width: 400px;
+  min-width:400px ;
 }
 .game {
   border-radius: 5%;
