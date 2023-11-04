@@ -122,34 +122,42 @@ table {
   border-spacing: 0;
 }
 
-body,
-html {
-  font: 16px/1.4 Georgia, serif;
-}
 @media only screen and (max-width: 500px) {
   body,
   html {
-    font-size: 14px;
+    font-size: 10px;
   }
 }
-.page {
-  max-width: 400px;
-  margin: 0 auto;
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font: 16px/1.4 Georgia, serif;
+  text-align: center;
+  background: #e8dddd74;
+}
+
+.game-area {
+  display: block;
+  max-width: 600px;
+  margin: auto;
   text-align: center;
   user-select: none;
+  min-width: 400px;
 }
 .game {
   border-radius: 5%;
-  overflow: hidden;
 }
 
-.fifteen {
+.game {
   width: 100%;
   padding-bottom: 100%;
   background: #b8ede1;
   position: relative;
   border-radius: 5%;
-  overflow: hidden;
 }
 .button {
   outline: 0;
@@ -166,70 +174,70 @@ html {
   cursor: pointer;
   box-shadow: inset 1px 1px #e5d6f6;
   transition: transform 0.2s, filter 0.5s;
-  border-radius: 20%;
+  border-radius: 5%;
 }
 
 .value1 {
   background-image: url(../assets/content/image_part_001.jpg);
-  background-size: 100px 100px;
+  background-size: 100% 100%;
 }
 .value2 {
   background-image: url(../assets/content/image_part_002.jpg);
-  background-size: 100px 100px;
+  background-size: 100% 100%;
 }
 .value3 {
   background-image: url(../assets/content/image_part_003.jpg);
-  background-size: 100px 100px;
+  background-size: 100% 100%;
 }
 .value4 {
   background-image: url(../assets/content/image_part_004.jpg);
-  background-size: 100px 100px;
+  background-size: 100% 100%;
 }
 .value5 {
   background-image: url(../assets/content/image_part_005.jpg);
-  background-size: 100px 100px;
+  background-size: 100% 100%;
 }
 .value6 {
   background-image: url(../assets/content/image_part_006.jpg);
-  background-size: 100px 100px;
+  background-size: 100% 100%;
 }
 .value7 {
   background-image: url(../assets/content/image_part_007.jpg);
-  background-size: 100px 100px;
+  background-size: 100% 100%;
 }
 .value8 {
   background-image: url(../assets/content/image_part_008.jpg);
-  background-size: 100px 100px;
+  background-size: 100% 100%;
 }
 .value9 {
   background-image: url(../assets/content/image_part_009.jpg);
-  background-size: 100px 100px;
+  background-size: 100% 100%;
 }
 .value10 {
   background-image: url(../assets/content/image_part_010.jpg);
-  background-size: 100px 100px;
+  background-size: 100% 100%;
 }
 .value11 {
   background-image: url(../assets/content/image_part_011.jpg);
-  background-size: 100px 100px;
+  background-size: 100% 100%;
 }
 .value12 {
   background-image: url(../assets/content/image_part_012.jpg);
-  background-size: 100px 100px;
+  background-size: 100% 100%;
 }
 .value13 {
   background-image: url(../assets/content/image_part_013.jpg);
-  background-size: 100px 100px;
+  background-size: 100% 100%;
 }
 .value14 {
   background-image: url(../assets/content/image_part_014.jpg);
-  background-size: 100px 100px;
+  background-size: 100% 100%;
 }
 .value15 {
   background-image: url(../assets/content/image_part_015.jpg);
-  background-size: 100px 100px;
+  background-size: 100% 100%;
 }
 .value16 {
   background-image: url(../assets/content/image_part_016.jpg);
-  background-size: 100px 100px;
+  background-size: 100% 100%;
 }

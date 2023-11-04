@@ -1,5 +1,5 @@
 const gameNode = document.getElementById("game"),
-  container = document.getElementById("fifteen"),
+  container = document.getElementById("game"),
   matrixItem = Array.from(container.querySelectorAll(".button")),
   countItems = 16;
 // if (16 !== itemNodes.length)
