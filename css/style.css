@@ -122,20 +122,13 @@ table {
   border-spacing: 0;
 }
 
-@media only screen and (max-width: 500px) {
-  body,
-  html {
-    font-size: 10px;
-  }
-}
-
 body {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
-  font: 16px/1.4 Georgia, serif;
+  font: 14px/1.4 Georgia, serif;
   text-align: center;
   background: #e8dddd74;
 }
@@ -145,7 +138,7 @@ body {
   margin: auto;
   text-align: center;
   user-select: none;
-  min-width:400px ;
+  width: 400px;
 }
 .game {
   border-radius: 5%;
@@ -157,6 +150,7 @@ body {
   background: #b8ede1;
   position: relative;
   border-radius: 5%;
+  overflow: hidden;
 }
 .button {
   outline: 0;
@@ -171,10 +165,10 @@ body {
   color: #f8f8ff;
   font-size: 2rem;
   cursor: pointer;
-  box-shadow: inset 1px 1px #e5d6f6;
+  box-shadow: inset 1px 1px #b8ede1;
   transition: transform 0.2s, filter 0.5s;
-  border-radius: 5%;
-  text-shadow: 0px 0px 6px rgba(0,0,0,0.64);
+  border-radius: 10%;
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.64);
 }
 
 .value1 {
@@ -240,4 +234,46 @@ body {
 .value16 {
   background-image: url(../assets/content/render-1/image_part_016.jpg);
   background-size: 100% 100%;
+}
+
+@media (max-width: 500px) {
+  body,
+  html {
+    font-size: 10px;
+  }
+  .game-area {
+    display: block;
+    margin: auto;
+    text-align: center;
+    user-select: none;
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 400px) {
+  body,
+  html {
+    font-size: 8px;
+  }
+
+  .game-area {
+    width: 100vw;
+  }
+}
+
+@media (min-width: 500px) {
+  body,
+  html {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 700px) {
+  body,
+  html {
+    font-size: 16px;
+  }
+  .game-area {
+    width: 600px;
+  }
 }
