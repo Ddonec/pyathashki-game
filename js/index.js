@@ -22,7 +22,7 @@ window.addEventListener("load", () => {
         (t += 1),
         t >= maxShuffles &&
           ((t = 0), clearInterval(e), gameNode.classList.remove(shuffleClass));
-    }, ));
+    }));
 });
 let blockedCoords = null;
 function randomSwap(e) {
@@ -124,9 +124,12 @@ function isWon(e) {
 const wonClass = "fifteenWon";
 function addWonClass() {
   setTimeout(() => {
-    container.classList.add(wonClass),
-      setTimeout(() => {
-        container.classList.remove(wonClass);
-      }, );
-  }, );
+    containerNode.classList.add(wonClass);
+    setTimeout(() => {
+      containerNode.classList.remove(wonClass);
+      alert(
+        "Поздравляем! Ты прошёл испытание - перед тобой новинка от Santek, коллекция Каспер"
+      );
+    }, 1000); // Ждем 1 секунду перед выводом alert
+  }, 200);
 }
