@@ -168,75 +168,76 @@ body {
   margin: 0;
   padding: 0;
   border: none;
-  color: #fff;
+  color: #f8f8ff;
   font-size: 2rem;
   cursor: pointer;
   box-shadow: inset 1px 1px #e5d6f6;
   transition: transform 0.2s, filter 0.5s;
   border-radius: 5%;
+  text-shadow: 0px 0px 6px rgba(0,0,0,0.64);
 }
 
 .value1 {
-  background-image: url(../assets/content/image_part_001.jpg);
+  background-image: url(../assets/content/render-1/image_part_001.jpg);
   background-size: 100% 100%;
 }
 .value2 {
-  background-image: url(../assets/content/image_part_002.jpg);
+  background-image: url(../assets/content/render-1/image_part_002.jpg);
   background-size: 100% 100%;
 }
 .value3 {
-  background-image: url(../assets/content/image_part_003.jpg);
+  background-image: url(../assets/content/render-1/image_part_003.jpg);
   background-size: 100% 100%;
 }
 .value4 {
-  background-image: url(../assets/content/image_part_004.jpg);
+  background-image: url(../assets/content/render-1/image_part_004.jpg);
   background-size: 100% 100%;
 }
 .value5 {
-  background-image: url(../assets/content/image_part_005.jpg);
+  background-image: url(../assets/content/render-1/image_part_005.jpg);
   background-size: 100% 100%;
 }
 .value6 {
-  background-image: url(../assets/content/image_part_006.jpg);
+  background-image: url(../assets/content/render-1/image_part_006.jpg);
   background-size: 100% 100%;
 }
 .value7 {
-  background-image: url(../assets/content/image_part_007.jpg);
+  background-image: url(../assets/content/render-1/image_part_007.jpg);
   background-size: 100% 100%;
 }
 .value8 {
-  background-image: url(../assets/content/image_part_008.jpg);
+  background-image: url(../assets/content/render-1/image_part_008.jpg);
   background-size: 100% 100%;
 }
 .value9 {
-  background-image: url(../assets/content/image_part_009.jpg);
+  background-image: url(../assets/content/render-1/image_part_009.jpg);
   background-size: 100% 100%;
 }
 .value10 {
-  background-image: url(../assets/content/image_part_010.jpg);
+  background-image: url(../assets/content/render-1/image_part_010.jpg);
   background-size: 100% 100%;
 }
 .value11 {
-  background-image: url(../assets/content/image_part_011.jpg);
+  background-image: url(../assets/content/render-1/image_part_011.jpg);
   background-size: 100% 100%;
 }
 .value12 {
-  background-image: url(../assets/content/image_part_012.jpg);
+  background-image: url(../assets/content/render-1/image_part_012.jpg);
   background-size: 100% 100%;
 }
 .value13 {
-  background-image: url(../assets/content/image_part_013.jpg);
+  background-image: url(../assets/content/render-1/image_part_013.jpg);
   background-size: 100% 100%;
 }
 .value14 {
-  background-image: url(../assets/content/image_part_014.jpg);
+  background-image: url(../assets/content/render-1/image_part_014.jpg);
   background-size: 100% 100%;
 }
 .value15 {
-  background-image: url(../assets/content/image_part_015.jpg);
+  background-image: url(../assets/content/render-1/image_part_015.jpg);
   background-size: 100% 100%;
 }
 .value16 {
-  background-image: url(../assets/content/image_part_016.jpg);
+  background-image: url(../assets/content/render-1/image_part_016.jpg);
   background-size: 100% 100%;
 }
