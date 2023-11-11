@@ -251,6 +251,11 @@ body {
   justify-content: center;
   align-items: center;
   gap: 10px;
+  z-index: 20;
+  position: relative;
+}
+.game-and-buttons {
+  z-index: 20;
 }
 .buttons-btn-area {
   width: 190px;
@@ -347,5 +352,3 @@ body {
 .none {
   display: none;
 }
-
-
