@@ -258,7 +258,7 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 60px;
-  background: var(--main-colours-bright-blue, #57b3d9);
+  background: #57b3d9;
   box-shadow: 4px -4px 0px 0px #98afbf;
 }
 .top-smoke {
@@ -345,6 +345,16 @@ body {
 .none {
   display: none;
 }
+@media (max-width: 700px) {
+  .image-win img {
+    width: 500px;
+    border-radius: 30px;
+  }
+  .text-popup-win {
+    width: 500px;
+    font-size: 25px;
+  }
+}
 @media (max-width: 500px) {
   body,
   html {
@@ -357,6 +367,13 @@ body {
     user-select: none;
     min-width: 200px;
   }
+  .image-win img {
+    width: 90%;
+    border-radius: 5%;
+  }
+  .text-popup-win {
+    width: 90%;
+  }
 }
 
 @media (max-width: 400px) {
@@ -367,6 +384,10 @@ body {
 
   .game-area {
     width: 100vw;
+  }
+  .text-popup-win {
+    width: 90%;
+    font-size: 20px;
   }
 }
 
@@ -386,3 +407,4 @@ body {
     width: 600px;
   }
 }
+

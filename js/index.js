@@ -7,6 +7,7 @@ const mixBtn = document.getElementById("mix-puzzles");
 const lossBtn = document.getElementById("take-a-fall");
 const gBG = document.querySelector(".grey-bg");
 const popUpWin = document.querySelector(".popup-win");
+const newBtns = document.querySelector(".button-area");
 // if (16 !== itemNodes.length)
 //   throw new Error(
 //     `Ð”Ð¾Ð»Ð¶Ð½Ð¾ Ð±Ñ‹Ñ‚ÑŒ Ñ€Ð¾Ð²Ð½Ð¾ ${countItems} items in HTML`
@@ -160,6 +161,8 @@ function popuptowin() {
   popUpWin.classList.add("active");
   gBG.classList.remove("none");
   gBG.classList.add("active");
+  container.style.display = "none";
+  newBtns.style.display = "none";
 }
 
 lossBtn.addEventListener("click", function () {
