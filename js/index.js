@@ -2,11 +2,16 @@ const gameNode = document.getElementById("game"),
   container = document.getElementById("game"),
   matrixItem = Array.from(container.querySelectorAll(".button")),
   countItems = 16;
+
+const mixBtn = document.getElementById("mix-puzzles");
+const lossBtn = document.getElementById("take-a-fall");
+const gBG = document.querySelector(".grey-bg");
+const popUpWin = document.querySelector(".popup-win");
 // if (16 !== itemNodes.length)
 //   throw new Error(
 //     `Ð”Ð¾Ð»Ð¶Ð½Ð¾ Ð±Ñ‹Ñ‚ÑŒ Ñ€Ð¾Ð²Ð½Ð¾ ${countItems} items in HTML`
 //   );
-matrixItem[countItems - 1].style.display = "none";
+// matrixItem[countItems - 1].style.display = "none";
 let matrix = getMatrix(matrixItem.map((e) => Number(e.dataset.matrixId)));
 setPositionItems(matrix);
 const maxShuffles = 50,
@@ -127,9 +132,36 @@ function addWonClass() {
     container.classList.add(wonClass);
     setTimeout(() => {
       container.classList.remove(wonClass);
-      alert(
-        "Поздравляем! Ты прошёл испытание - перед тобой новинка от Santek, коллекция Каспер"
-      );
+
+      document.querySelector(".value16").classList.add("visible");
+      setTimeout(() => {
+        popuptowin();
+      }, 300);
     }, 10);
   }, 200);
 }
+
+mixBtn.addEventListener("click", function () {
+  let e,
+    t = 0;
+  clearInterval(e),
+    gameNode.classList.add(shuffleClass),
+    (e = setInterval(() => {
+      randomSwap(matrix),
+        setPositionItems(matrix),
+        (t += 1),
+        t >= maxShuffles &&
+          ((t = 0), clearInterval(e), gameNode.classList.remove(shuffleClass));
+    }));
+});
+
+function popuptowin() {
+  popUpWin.classList.remove("none");
+  popUpWin.classList.add("active");
+  gBG.classList.remove("none");
+  gBG.classList.add("active");
+}
+
+lossBtn.addEventListener("click", function () {
+  alert("Ты успешно сдался");
+});

@@ -130,7 +130,8 @@ body {
   margin: 0;
   font: 14px/1.4 Georgia, serif;
   text-align: center;
-  background: #e8dddd74;
+  background: #236192;
+  position: relative;
 }
 
 .game-area {
@@ -139,6 +140,7 @@ body {
   text-align: center;
   user-select: none;
   width: 400px;
+  z-index: 20;
 }
 .game {
   border-radius: 5%;
@@ -147,7 +149,7 @@ body {
 .game {
   width: 100%;
   padding-bottom: 100%;
-  background: #b8ede1;
+
   position: relative;
   border-radius: 5%;
   overflow: hidden;
@@ -165,9 +167,9 @@ body {
   color: #f8f8ff;
   font-size: 2rem;
   cursor: pointer;
-  box-shadow: inset 1px 1px #b8ede1;
+  box-shadow: inset 1px 1px #236192;
   transition: transform 0.2s, filter 0.5s;
-  border-radius: 10%;
+  /* border-radius: 10%; */
   text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.64);
 }
 
@@ -235,7 +237,114 @@ body {
   background-image: url(../assets/content/render-1/image_part_016.jpg);
   background-size: 100% 100%;
 }
+.value16 {
+  opacity: 0;
+}
+.visible {
+  opacity: 1;
+  transition: 0.3s;
+}
+.button-area {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.buttons-btn-area {
+  width: 190px;
+  padding: 15px 20px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 60px;
+  background: var(--main-colours-bright-blue, #57b3d9);
+  box-shadow: 4px -4px 0px 0px #98afbf;
+}
+.top-smoke {
+  background-image: url(../assets/content/smoke/top.png);
+  background-repeat: repeat-x;
 
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  top: 0;
+  opacity: 0.5;
+}
+.botoom-smoke {
+  background-image: url(../assets/content/smoke/bottom.png);
+  background-repeat: repeat-x;
+  background-position: bottom;
+
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  bottom: 0;
+  opacity: 0.5;
+}
+.left-smoke {
+  background-image: url(../assets/content/smoke/lift\ side.png);
+  background-repeat: repeat-y;
+
+  position: absolute;
+  width: 15%;
+  height: 100%;
+  left: 0;
+  opacity: 0.5;
+}
+.right-smoke {
+  background-image: url(../assets/content/smoke/right\ side.png);
+  background-repeat: repeat-y;
+  background-position: right;
+  position: absolute;
+  width: 15%;
+  height: 100%;
+  right: 0;
+  opacity: 0.5;
+}
+.popup-win {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  filter: blur(0px);
+}
+.text-popup-win {
+  position: absolute;
+  text-shadow: gray 4px;
+  font-size: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 700px;
+  text-shadow: 0px 0px 16px rgba(0, 0, 0, 0.8);
+  color: #f8f8ff;
+}
+
+.image-win img {
+  width: 700px;
+  border-radius: 30px;
+}
+
+/* .grey-bg {
+  display: none;
+} */
+.grey-bg.active {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: gray;
+  z-index: 5;
+  opacity: 0.4;
+  display: block;
+  filter: blur(50%);
+}
+.none {
+  display: none;
+}
 @media (max-width: 500px) {
   body,
   html {
