@@ -395,3 +395,33 @@ body {
 .none {
   display: none;
 }
+.logo-top-container {
+  position: absolute;
+  top: 10px;
+  display: flex;
+  width: calc(100vw - 20px);
+  align-items: center;
+}
+.egg {
+  height: 75px;
+}
+.image-dragon-egg {
+  height: 75px;
+}
+.dragon-road {
+  color: #fff;
+  text-align: left;
+  /* Shadow */
+  text-shadow: 0px 1px 3px #000;
+
+  /* Desktop text styles/h2 */
+  font-family: Philosopher;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px; /* 82.143% */
+  text-transform: uppercase;
+}
+.logo-top {
+  margin-left: auto;
+}
