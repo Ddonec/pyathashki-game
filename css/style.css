@@ -262,6 +262,8 @@ body {
   border-radius: 60px;
   background: #57b3d9;
   box-shadow: 4px -4px 0px 0px #98afbf;
+  border: none;
+  cursor: pointer;
 }
 .top-smoke {
   background-image: url(../assets/content/smoke/top.png);
@@ -288,7 +290,7 @@ body {
 .left-smoke {
   background-image: url(../assets/content/smoke/lift\ side.png);
   background-repeat: repeat-y;
-  background-position: left;
+  background-position: right;
 
   position: absolute;
   width: 15%;
@@ -299,7 +301,7 @@ body {
 .right-smoke {
   background-image: url(../assets/content/smoke/right\ side.png);
   background-repeat: repeat-y;
-  background-position: right;
+  background-position: left;
   position: absolute;
   width: 15%;
   height: 100%;
@@ -319,24 +321,33 @@ body {
   filter: blur(0px);
 }
 .text-popup-win {
-  position: absolute;
+  /* position: absolute; */
   text-shadow: gray 4px;
-  font-size: 40px;
+  font-size: 26px;
   font-family: Arial, Helvetica, sans-serif;
   width: 700px;
   text-shadow: 0px 0px 16px rgba(0, 0, 0, 0.8);
   color: #f8f8ff;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .image-win img {
   width: 700px;
   border-radius: 30px;
 }
+.popup-flex {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+  align-items: center;
+}
 
 /* .grey-bg {
   display: none;
 } */
-.grey-bg.active {
+/* .grey-bg.active {
   position: fixed;
   width: 100vw;
   height: 100vh;
@@ -345,7 +356,7 @@ body {
   opacity: 0.4;
   display: block;
   filter: blur(50%);
-}
+} */
 
 #mix-puzzles {
   color: #fefbf5;
@@ -367,6 +378,18 @@ body {
   font-weight: 500;
   line-height: 20px; /* 100% */
   border: none;
+}
+#go-to-home-btn {
+  color: #fefbf5;
+  text-align: center;
+
+  /* Mobile text styles/Paragraph */
+  font-family: "Jost";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 100% */
+  width: fit-content;
 }
 
 .none {

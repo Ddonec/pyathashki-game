@@ -8,6 +8,7 @@ const lossBtn = document.getElementById("take-a-fall");
 const gBG = document.querySelector(".grey-bg");
 const popUpWin = document.querySelector(".popup-win");
 const newBtns = document.querySelector(".button-area");
+const goHomeBtn = document.getElementById("go-to-home-btn");
 // if (16 !== itemNodes.length)
 //   throw new Error(
 //     `Ð”Ð¾Ð»Ð¶Ð½Ð¾ Ð±Ñ‹Ñ‚ÑŒ Ñ€Ð¾Ð²Ð½Ð¾ ${countItems} items in HTML`
@@ -128,6 +129,8 @@ function isWon(e) {
   return !0;
 }
 const wonClass = "fifteenWon";
+
+// Функция победы
 function addWonClass() {
   setTimeout(() => {
     container.classList.add(wonClass);
@@ -136,7 +139,7 @@ function addWonClass() {
 
       document.querySelector(".value16").classList.add("visible");
       setTimeout(() => {
-        popuptowin();
+        popupToWin();
       }, 300);
     }, 10);
   }, 200);
@@ -156,7 +159,8 @@ mixBtn.addEventListener("click", function () {
     }));
 });
 
-function popuptowin() {
+// Функция появления pop-up
+function popupToWin() {
   popUpWin.classList.remove("none");
   popUpWin.classList.add("active");
   gBG.classList.remove("none");
@@ -165,6 +169,31 @@ function popuptowin() {
   newBtns.style.display = "none";
 }
 
+function popupToWinRemowe() {
+  popUpWin.classList.add("none");
+  popUpWin.classList.remove("active");
+  gBG.classList.add("none");
+  gBG.classList.remove("active");
+  container.style.display = "block";
+  newBtns.style.display = "flex";
+  document.querySelector(".value16").classList.remove("visible")
+}
+
 lossBtn.addEventListener("click", function () {
   alert("Ты успешно сдался");
+  setTimeout(() => {
+    container.classList.add(wonClass);
+    setTimeout(() => {
+      container.classList.remove(wonClass);
+
+      document.querySelector(".value16").classList.add("visible");
+      setTimeout(() => {
+        popupToWin();
+      }, 300);
+    }, 10);
+  }, 200);
+});
+
+goHomeBtn.addEventListener("click", function () {
+  popupToWinRemowe();
 });
