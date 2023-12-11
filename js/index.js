@@ -159,6 +159,14 @@ function popupToWinRemowe() {
 
 lossBtn.addEventListener("click", function () {
    alert("Ты успешно сдался");
+   sendWinStatusToServer(false);
+
+   //Сюда надо пвесить функционал перехода на домашнюю страницу или в личный кабинет
+
+   //  чтобы убрать победу с кнопки "сдаться" удали код между коментариями ниже
+
+   // от сюда
+
    setTimeout(() => {
       container.classList.add(wonClass);
       setTimeout(() => {
@@ -172,6 +180,9 @@ lossBtn.addEventListener("click", function () {
       }, 10);
       console.log(true);
    }, 200);
+
+   // до сюда
+
 });
 
 goHomeBtn.addEventListener("click", function () {

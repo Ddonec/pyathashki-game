@@ -332,9 +332,18 @@ body {
    margin: 0 auto;
 }
 
-.image-win img {
+/* .image-win img {
    width: 700px;
    border-radius: 30px;
+   aspect-ratio: 1/1;
+} */
+
+.image-win {
+   width: 700px;
+   border-radius: 30px;
+   aspect-ratio: 1/1;
+   background-image: url(../assets/content/render-1/render-1.png);
+   background-size: cover;
 }
 .popup-flex {
    display: flex;
