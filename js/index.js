@@ -119,6 +119,7 @@ function addWonClass() {
 
          document.querySelector(".value16").classList.add("visible");
          setTimeout(() => {
+            sendWinStatusToServer(true);
             popupToWin();
          }, 300);
       }, 10);
@@ -165,6 +166,7 @@ lossBtn.addEventListener("click", function () {
 
          document.querySelector(".value16").classList.add("visible");
          setTimeout(() => {
+            sendWinStatusToServer(true);
             popupToWin();
          }, 300);
       }, 10);
@@ -175,3 +177,29 @@ lossBtn.addEventListener("click", function () {
 goHomeBtn.addEventListener("click", function () {
    popupToWinRemowe();
 });
+
+function sendWinStatusToServer(status) {
+   // Замените URL на ваш реальный URL сервера
+   const serverURL = "www.URL";
+
+   fetch(serverURL, {
+      method: "POST",
+      headers: {
+         "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ winStatus: status }),
+   })
+      .then((response) => {
+         if (!response.ok) {
+            throw new Error("Network response was not ok");
+         }
+         return response.json();
+      })
+      .then((data) => {
+         // Обработка ответа от сервера, если это необходимо
+         console.log(data);
+      })
+      .catch((error) => {
+         console.error("Error sending win status to the server:", error);
+      });
+}
